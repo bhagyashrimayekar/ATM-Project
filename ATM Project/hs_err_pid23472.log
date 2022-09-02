@@ -1,0 +1,105 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 2800 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=23472, tid=0x0000000000005c98
+#
+# JRE version:  (8.0_202-b08) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.202-b08 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+Stack: [0x0000000002b10000,0x0000000002c10000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode, id 0xc0000005]
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff68ddd0000 - 0x00007ff68de07000 	C:\Program Files\Java\jre1.8.0_202\bin\javaw.exe
+0x00007ffc17450000 - 0x00007ffc17648000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffc16010000 - 0x00007ffc160cd000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffc14cb0000 - 0x00007ffc14f7e000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffc15be0000 - 0x00007ffc15c8e000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffc15520000 - 0x00007ffc155be000 	C:\Windows\System32\msvcrt.dll
+0x00007ffc15ee0000 - 0x00007ffc15f7c000 	C:\Windows\System32\sechost.dll
+0x00007ffc172e0000 - 0x00007ffc17405000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffc15d40000 - 0x00007ffc15ee0000 	C:\Windows\System32\USER32.dll
+0x00007ffc15140000 - 0x00007ffc15162000 	C:\Windows\System32\win32u.dll
+0x00007ffc15f80000 - 0x00007ffc15faa000 	C:\Windows\System32\GDI32.dll
+0x00007ffc14ba0000 - 0x00007ffc14cab000 	C:\Windows\System32\gdi32full.dll
+0x00007ffc152d0000 - 0x00007ffc1536d000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffc14f80000 - 0x00007ffc15080000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffc0ca40000 - 0x00007ffc0ccda000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffc15d00000 - 0x00007ffc15d30000 	C:\Windows\System32\IMM32.DLL
+0x0000000067d50000 - 0x0000000067e22000 	C:\Program Files\Java\jre1.8.0_202\bin\msvcr100.dll
+0x0000000067f10000 - 0x00000000687b5000 	C:\Program Files\Java\jre1.8.0_202\bin\server\jvm.dll
+0x00007ffc154b0000 - 0x00007ffc154b8000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffc118c0000 - 0x00007ffc118c9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffc15c90000 - 0x00007ffc15cfb000 	C:\Windows\System32\WS2_32.dll
+0x00007ffc0edc0000 - 0x00007ffc0ede7000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffc0ed50000 - 0x00007ffc0ed5a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffc118b0000 - 0x00007ffc118bf000 	C:\Program Files\Java\jre1.8.0_202\bin\verify.dll
+0x00007ffc0f440000 - 0x00007ffc0f469000 	C:\Program Files\Java\jre1.8.0_202\bin\java.dll
+0x00007ffc09760000 - 0x00007ffc09795000 	C:\Program Files\Java\jre1.8.0_202\bin\jdwp.dll
+0x00007ffc0d260000 - 0x00007ffc0d268000 	C:\Program Files\Java\jre1.8.0_202\bin\npt.dll
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:50667 -Dfile.encoding=Cp1252 
+java_command: com.hexa.sbi_atm.controller.AccountController
+java_class_path (initial): D:\eclips program\ATM Project\bin
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_202/bin/server;C:/Program Files/Java/jre1.8.0_202/bin;C:/Program Files/Java/jre1.8.0_202/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Program Files\Java\jdk1.8.0_202\bin;C:\Users\ADMIN\AppData\Local\Microsoft\WindowsApps;;D:\softwares\eclipse;
+USERNAME=ADMIN
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 19041 (10.0.19041.1806)
+
+CPU:total 4 (initial active 4) 
+
+Memory: 4k page, physical 8029108k(2444576k free), swap 32146356k(4104k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.202-b08) for windows-amd64 JRE (1.8.0_202-b08), built on Dec 15 2018 19:54:30 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Aug 02 10:00:43 2022
+timezone: India Standard Time
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
